@@ -9,3 +9,4 @@
 * https://github.com/scrooloose/nerdtree
 * https://github.com/itchyny/lightline.vim
 * https://github.com/sheerun/vim-polyglot
+* https://github.com/ycm-core/YouCompleteMe
