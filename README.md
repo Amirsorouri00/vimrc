@@ -10,3 +10,4 @@
 * https://github.com/itchyny/lightline.vim
 * https://github.com/sheerun/vim-polyglot
 * https://github.com/ycm-core/YouCompleteMe
+* https://chromatichq.com/blog/working-vim-never-leave-your-terminal
