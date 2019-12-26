@@ -1,0 +1,8 @@
+set ts=4
+set sw=4
+set ai
+set nu
+set nuw=7
+set hls
+colorscheme default
+set colorcolumn=120
