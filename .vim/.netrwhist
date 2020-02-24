@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/amirsorouri/Desktop/master/ipc-benchmarking/psvm/multi-reader_one_writer/hpc_clean_tests'
+let g:netrw_dirhist_2='/home/amirsorouri/Desktop/master/ipc-benchmarking/psvm/multi-reader_one_writer/hpc_clean_tests/reader_writer_block_test'
+let g:netrw_dirhist_3='/home/amirsorouri/Desktop/master/ipc-benchmarking'
+let g:netrw_dirhist_4='/home/amirsorouri/Desktop/master/ipc-benchmarking/psvm/multi-reader_one_writer/hpc_clean_tests/reader_writer_block_test'
+let g:netrw_dirhist_5='/home/amirsorouri/Desktop/c/lock'
+let g:netrw_dirhist_6='/home/amirsorouri/Desktop/c/lock/spinlocks-cpp-bench'
