@@ -1,4 +1,4 @@
-source ~/Documents/zsh-snap/znap.zsh
+source ~/zsh-snap/znap.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -112,7 +112,9 @@ autoload -Uz compinit
 compinit
 
 # Zplug
-. ${HOMEBREW_PREFIX}/opt/zplug/init.zsh
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+source $ZPLUG_HOME/init.zsh
+. ${ZPLUG_HOME}
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
@@ -140,28 +142,29 @@ export HOMEBREW_PREFIX='/usr/local'
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 
-function activate_libpq () {
-  export PATH="${HOMEBREW_PREFIX}/opt/libpq/bin:$PATH"
-  export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/libpq/lib"
-  export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/libpq/include"
-}
-function activate_openssl () {
-  export PATH="${HOMEBREW_PREFIX}/opt/openssl@3/bin:$PATH"
-  export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@3/lib"
-  export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@3/include"
-}
-function activate_kafard () {
-  export CPATH=${HOMEBREW_CELLAR}/librdkafka/1.8.2/include
-}
-function activate_gsed () {
-  export PATH="${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
-}
+# function activate_libpq () {
+#   export PATH="${HOMEBREW_PREFIX}/opt/libpq/bin:$PATH"
+#   export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/libpq/lib"
+#   export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/libpq/include"
+# }
+# function activate_openssl () {
+#   export PATH="${HOMEBREW_PREFIX}/opt/openssl@3/bin:$PATH"
+#   export LDFLAGS="-L${HOMEBREW_PREFIX}/opt/openssl@3/lib"
+#   export CPPFLAGS="-I${HOMEBREW_PREFIX}/opt/openssl@3/include"
+# }
+# function activate_kafard () {
+#   export CPATH=${HOMEBREW_CELLAR}/librdkafka/1.8.2/include
+# }
+# function activate_gsed () {
+#   export PATH="${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
+# }
 
-export -f activate_gsed
-export -f activate_kafard
-export -f activate_openssl
-export -f activate_libpq
+# export -f activate_gsed
+# export -f activate_kafard
+# export -f activate_openssl
+# export -f activate_libpq
 
+alias python='python3.9'
 alias run-admin-gw='go run ./cmd/gw -router admin -config ./config.yml'
 alias run-customer-gw='go run ./cmd/gw -router customer -config ./config.yml'
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
